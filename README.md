@@ -4,26 +4,9 @@ This folder is designed to accompany the [Oracle Python4ATP HOL](https://github.
 
 **Instructions for running the folder**
 
-- In the terminal, make sure you are inside the terraform-OCI-master folder
-
-- Run the following commands
-
-    `$ terraform init`
-
-    `$ source env.vars`
-    
-    `$ terraform plan`
-    
-    `$ terraform apply`
-
-    When prompted, input yes and hit enter.
-
-**Wait a few minutes for all of the resources to be created.**
-
+- All you need to do is download the zip file from this repository.
 
 -For debugging, see the following resources:
-
-[Installing Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
 
 [FAQ for the Oracle Cloud Infrastructure Terraform provider](https://www.terraform.io/docs/providers/oci/guides/faq.html)
 
