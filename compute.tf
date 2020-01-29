@@ -6,7 +6,7 @@ resource "oci_core_instance" "developer_instance" {
   shape               = "${var.instance_shape}"
 
   metadata = {
-    ssh_authorized_keys = "${file("/path/to/.ssh/id_rsa.pub")}" /* add path to public ssh key */
+    ssh_authorized_keys = "${var.ssh_public_key}" /* add path to public ssh key */
   }
 
   source_details {

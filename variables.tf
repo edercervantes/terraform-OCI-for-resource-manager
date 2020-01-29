@@ -1,4 +1,6 @@
 
+/* When updating, these variables cannot be in apache syntax*/
+
 ########################COMPUTE########################
 variable "instance_display_name"{
     default = "AlphaOffice" //Does not have to be unique. Avoid entering confidential information.
@@ -6,6 +8,10 @@ variable "instance_display_name"{
 
 variable "instance_shape" {
   default = "VM.Standard2.1"
+}
+
+variable ssh_public_key {
+  default = ""
 }
 
 ########################DATABASE########################
@@ -16,7 +22,7 @@ variable "autonomous_database_db_name" {
     default = "orcl4py"
 }
 variable "autonomous_database_admin_password" {
-    default = "a1phaOffice1_" //The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (") or the username "admin", regardless of casing.
+    default = "" //The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (") or the username "admin", regardless of casing.
 }
 
 ########################NETWORKING########################
@@ -28,10 +34,10 @@ variable "internet_gateway_display_name" {
 }
 
 variable "subnet_display_name" {
-    default = "Default Subnet"
+    default = "py4devSubnet"
 }
 data "oci_identity_availability_domain" "ad" {
-  compartment_id = "${var.tenancy_ocid}"
+  compartment_id = "${var.compartment_ocid}"
   ad_number = 2
 }
 
@@ -40,5 +46,9 @@ variable "bucket_name" {
     default = "py4dev"
 }
 variable "obj_store_namespace"{
-    default = "default_value"
+    default = ""
 }
+
+########################GOVERNANCE########################
+variable "region" {}
+variable "compartment_ocid" {}

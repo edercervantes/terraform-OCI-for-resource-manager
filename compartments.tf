@@ -1,6 +1,6 @@
 //Creates Demo compartment in root, then python4dev in Demo compartment.
 resource "oci_identity_compartment" "Demo" {
-    compartment_id = "${var.tenancy_ocid}"
+    compartment_id = "${var.compartment_ocid}"
     description = "compartment for demo resources"
     name = "Demo"
 }
