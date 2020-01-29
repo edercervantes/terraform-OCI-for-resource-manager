@@ -1,0 +1,1 @@
+# terraform-OCI-for-resource-manager
