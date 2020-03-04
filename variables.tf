@@ -38,7 +38,7 @@ variable "subnet_display_name" {
 }
 data "oci_identity_availability_domain" "ad" {
   compartment_id = "${var.compartment_ocid}"
-  ad_number = 2
+  ad_number = 1
 }
 
 ########################OBJECT_STORAGE########################
